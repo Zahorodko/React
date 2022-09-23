@@ -1,0 +1,602 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #e3e3e3;
+}
+.MainShop
+{
+    width: 1280px;
+    margin: 50px auto;  
+}
+header .logo{
+    font-weight: 600;
+    font-size: 2.9em;
+    text-shadow: -5px 5px #b7b7b7;
+    text-transform: uppercase;
+}
+footer
+{
+    text-align: center;
+    margin-top: 100px;
+}
+header ul.nav{
+    float: right;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+header ul.nav li{
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-weight: 600
+}
+header ul.nav li:hover{
+    opacity: .5;
+}
+main{
+    display: flex;
+    width: 100%;
+    min-height: 530px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .itemShop{
+    width: 18vw;
+    height: 85%;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    background: #d9d9d9;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -11px 15px 16px 3px #6c6c6c, 2px -5px 9px 3px #8f8f8f inset, -15px 10px 9px 1px #ffffff inset;
+    border-radius: 17px;
+}
+main .itemShop img,.full-item img{
+    width: 90%;
+    border-radius: 20px;
+    transition: transform 500ms ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: -10px 10px 16px -4px #7a7a7a;
+}
+main .itemShop img:hover,.full-item  img:hover{
+    transform: scale(1.03);
+}
+main h2, main p,main b, .full-item b,.full-item p.full-item h2{
+    margin: 10px 20px;
+    color: rgb(75, 74, 74);
+}
+main b,.full-item b{
+    color: rgb(122, 161, 90);
+}
+main h2
+{
+    background-color: #000000;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgb(255 255 255 / 70%);
+    background-clip: text;
+}
+main .add-to-card:hover,
+.full-item .add-to-card:hover{
+    transform: scale(1.2);
+}
+.shop-cart-button
+{
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+    width: 50px;
+    height: 50px;
+}
+.shop-cart-button:hover,
+.shop-cart-button.active {
+    color: #dc3d3d;
+}
+header{
+    position: relative;
+    z-index: 10;
+}
+.shop-cart{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 450px;
+    background-color: rgb(193 193 193);
+    box-shadow: 4px 5px 15px -7px #606060;
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 20px;
+    border: 1px solid #787878;
+}
+.shop-cart .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.shop-cart .itemShop{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.shop-cart .itemShop img{
+    width: 100px;
+    float: left;
+    margin-right: 20px;
+}
+.shop-cart .itemShop h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.shop-cart .itemShop p{
+    color: #797979;
+    font-weight: 600;
+}
+.shop-cart .itemShop .delete-icon{
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -25px;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+.shop-cart .itemShop .delete-icon:hover{
+    color: #d83030;
+    transform: scale(1.5);
+}
+.categories div{
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+    border: 1px solid white;
+    box-shadow: -5px 4px 6px 1px #a1a1a1, 2px -5px 6px 1px #ffffff, -3px 2px 6px 1px #bfbfbf inset;
+}
+.categories
+{
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.categories div:hover
+{
+    transform: translate(0px, 2px);
+    box-shadow: -5px 4px 6px 1px #a1a1a1, 2px -5px 6px 1px #ffffff, -5px 5px 6px 1px #646464 inset;
+}
+.full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    overflow: auto;
+}
+.full-item > div{
+    width: 600px;
+    position: relative;
+    margin: 10% auto;
+    padding: 40px 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+}
+.full-item button
+{
+    position: relative;
+    float: right;
+    top: 50px;
+    right: 20%;
+    padding: 8px;
+    font-weight: 600;
+    border-radius: 20%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+.full-item button:hover
+{
+    transform: scale(1.4);
+}
+.itemImgBuy
+{
+    display: flex;
+    align-items: center;
+}
+.ItemsTrue
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    box-sizing: border-box;
+    background: #ffffffb0;
+}
+.ItemsTrue img
+{
+    border-radius: 10px 10px 0 0;
+    max-height: 700px;
+    cursor: pointer;
+}
+.ItemsTrue .item{
+    width: 400px;
+    height: 550px;
+    margin-bottom: 50px;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+.ItemsTrueBlack
+{
+    position: absolute;
+    background: #0000006b;
+    width: 100%;
+    height: 100%;
+}
+.Price
+{
+    left: 20px;
+    bottom: 20px;
+    height: 35px;
+    text-align: center;
+    line-height: 31px;
+    font-weight: 600;
+    text-shadow: 3px 3px #b9b9b9;
+}
+.ItemFooter .add-to-card{
+    position: absolute;
+    right: 20px;
+    font-size: 1.7em;
+    width: 35px; 
+    height: 35px;
+    text-align: center;
+    color: #4297ef;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+.addCard
+{
+    position: absolute;
+    z-index: 2;
+    color: #06081e;
+    width: 40px;
+    height: 40px;
+}
+.addCardTwo
+{
+    position: absolute;
+    z-index: 1;
+    color: #a1a1a1;
+    transform: translate(-4px, 4px);
+    filter: blur(1px);
+    width: 40px;
+    height: 40px;
+}
+.ItemFooter{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Addbasket
+{
+    position: fixed;
+    background: #00000087;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5;
+}
+.Addbasket p
+{
+    background-color: #2d96cf;
+    padding: 2%;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.4em;
+}
+.ImgScale
+{
+    display: flex;
+    position: fixed;
+}
+.summaBuy
+{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: end;
+    cursor: pointer;
+    padding: 3px 10px;
+    background-color: #797979;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+.summaMain
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.summa{
+    width: 50%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+.Buy
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    background: #1f2c44b8;
+    align-items: center;
+    justify-content: space-around;
+}
+.RegisterNew
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    background: #2d96cf;
+    padding: 8em;
+}
+.FormInputBuy
+{
+    height: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.FormLabel
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.ShopTwoPage
+{
+    margin: 50px auto;
+}
+.ShopTwoPageMain
+{
+    width: 100%;
+    display: flex;
+    color: rgb(96, 96, 96);
+}
+.ShopTwoPageMainImage
+{
+    width: 50%;
+    height: 100%;
+    box-shadow: -11px 15px 16px 3px #6c6c6c, 2px -5px 9px 3px #8f8f8f inset, -15px 10px 9px 1px #ffffff inset;
+    border-radius: 17px;
+    overflow: hidden;
+}
+.ShopTwoPageMainImage img
+{
+    width: 100%;
+    height: 100%;
+}
+.ShopTwoPageMainAbout
+{
+    width: 50%;
+    background-color: #fdfdfd;
+    padding: 1em;
+    margin: 2em;
+    box-shadow: 4px -5px 10px -1px rgb(255 255 255), -1px 1px 5px -1px rgb(255 255 255), -4px 6px 6px rgb(131 131 131) inset, inset 0px 1px 7px rgb(151 151 151), 11px -13px 12px rgb(255 255 255) inset;
+    border-radius: 20px;
+}
+.ShopTwoPageMainAbout h1
+{
+    background-color: #1e1e1e; 
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5); 
+    -webkit-background-clip: text; 
+    -moz-background-clip: text; 
+    background-clip: text; 
+}
+.LogoImage
+{
+    width: 100%;
+    height: 100%;
+    background: url('../../public/img/logo1.png');
+}
+.ShopTwoPageKontakt
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    padding: 30px;
+}
+.ShopTwoPageKontakt li 
+{
+    list-style-type: none;
+    padding: 5px 0;
+    border-bottom: 1px solid  #c3c3c3;
+}
+.ShopTwoPageKontakt li:last-child 
+{
+    border-bottom: none;
+}
+.Back
+{
+    display: flex;
+    background-color: #ebebeb;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ShopTwoPageMainImageNoMain
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ShopTwoPageMainImageNoMain img
+{
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+}
+.ShopTwoPageFooter
+{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #939393;
+    margin: 0 0 10px 0;
+    align-items: center;
+}
+.MenuHeader
+{
+    width: 100%;
+    height: 40px;
+    background-color: #ededed;
+    display: flex;
+    box-shadow: 0px 8px 9px -4px black, 0px -7px 13px -4px white;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 0 0 10px;
+}
+.MenuHeader ul
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.MenuHeader li
+{
+    list-style-type: none;
+    padding: 0 15px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #2a2a2a;
+    cursor: pointer;
+}
+.MenuSee
+{
+    position: absolute;
+    top: 112px;
+    z-index: 3;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    border-top: 1px solid black;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.MenuSee ul
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 10px;
+    align-items: flex-start;
+}
+.MenuSee  li 
+{
+    padding: 10px 0;
+    color: rgba(102,102,102,.85);
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1em;
+    border-bottom: 1px solid rgb(215 215 215 / 85%);
+    text-transform: none;
+}
+.MenuSee  li:first-child
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #2a2a2a;
+    font-size: 1em;
+}
+.MenuSee  li:last-child
+{
+    border:none;
+}
+.MenuSee  li:hover
+{
+    color: black;
+}
+.ShopTwoPageMainImage
+{
+    padding: 25px;
+}
+.Cart
+{
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    padding: 0 15px;
+    transition: color, transform 500ms ease;
+}
+.Cart:hover{
+    color: #dc3d3d;
+    transform: scale(1.1);
+}
+.MenuSeeMain:hover .MenuSee
+{
+    visibility: visible;
+    opacity: 1;
+}
+.Header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
