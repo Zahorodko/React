@@ -105,4 +105,3 @@ export const ShopArray = [
     }
 ]
 export const ShopArrayImg = [{img: 'szafa_3.jpg',}]
-
