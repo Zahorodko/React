@@ -6,16 +6,16 @@ import CreateButton from './CreateButton';
 
 const Dictionary = ()=>{
         const [stateArr, setArr] = useState([
-            {id:1, title: 'Teach you', body: 'Научить тебя'},
-            {id:2, title: 'Tiny', body: 'Крошечный'},
-            {id:3, title: 'Whole', body: 'Весь'},
-            {id:4, title: 'Items', body: 'Предметы'},
-            {id:5, title: 'Target', body: 'Цель'},
-            {id:6, title: 'Band', body: 'Группа'},
-            {id:7, title: 'Sure', body: 'Конечно'},
-            {id:8, title: 'Battle', body: 'Боевой'},
-            {id:9, title: 'Call', body: 'Вызов'},
-            {id:10, title: 'Tank', body: 'Танк'}
+            {id:1, title: 'Teach you', body: 'Uczyć cię'},
+            {id:2, title: 'Tiny', body: 'malutki'},
+            {id:3, title: 'Whole', body: 'cały'},
+            {id:4, title: 'Items', body: 'przedmiotów'},
+            {id:5, title: 'Target', body: 'cel'},
+            {id:6, title: 'Band', body: 'orkiestra'},
+            {id:7, title: 'Sure', body: 'pewny'},
+            {id:8, title: 'Battle', body: 'bitwa'},
+            {id:9, title: 'Call', body: 'dzwonić'},
+            {id:10, title: 'Tank', body: 'czołg'}
         ])
         const [count, setCount] = useState(2);
         const [post, setPost] = useState({ id: 6, title: '', body: ''})
@@ -62,8 +62,8 @@ const Dictionary = ()=>{
                 <div className='value_1'>
                     <form>
                         <div>
-                            <input style={{marginRight:'5px'}} type="text" name="lname" placeholder='Слово' onChange={ e =>FirstL(e)}/>
-                            <input  style={{marginLeft:'5px'}} type="text" name="lname" placeholder='Перевод' onChange={ e => FirstL2(e)}/>
+                            <input style={{marginRight:'5px'}} type="text" name="lname" placeholder='Słowo' onChange={ e =>FirstL(e)}/>
+                            <input  style={{marginLeft:'5px'}} type="text" name="lname" placeholder='Tłumaczenie' onChange={ e => FirstL2(e)}/>
                         </div>
                         <button type='reset' onClick={()=>newPost()}>Add word</button>
                     </form>
