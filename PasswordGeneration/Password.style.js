@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import ImageFon from './5.jpg'
 
 export const GeneratorMain = styled.div `
     width: 100vw;
     height: 100vh;
     margin: 0%;
     padding: 0;
-    background: url('./img/5.jpg') no-repeat center center rgb(80,81,255);
+    background: url(${ImageFon}) no-repeat center center rgb(80,81,255);
     position: absolute;
     display: flex;
     align-items: center;
