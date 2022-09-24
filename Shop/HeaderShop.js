@@ -40,32 +40,6 @@ const HeaderShop = (props) =>{
                     <p  className='summa'>Summa: {new Intl.NumberFormat().format(summa)}zł</p>
                     <div className="summaBuy" onClick={()=> setBuy(!Buy)}>BUY</div>
                 </div>
-                {Buy
-                ? <div className="Buy">
-                    <div className="RegisterNew">
-                        <form action="/action_page.php">
-                            <label className="FormLabel" for="fname">First name:</label><br/>
-                            <input className="FormInputBuy" type="text" id="fname" name="fname" /><br/>
-                            <label className="FormLabel" for="lname">Last name:</label><br/>
-                            <input className="FormInputBuy" type="text" id="lname" name="lname" /><br/>
-                            <label className="FormLabel" for="birthday">Birthday:</label><br/>
-                            <input className="FormInputBuy" type="date" id="birthday" name="birthday"/><br/>
-                            <label className="FormLabel" for="email">Enter your email:</label><br/>
-                            <input className="FormInputBuy" type="email" id="email" name="email"/><br/>
-                            <label className="FormLabel" for="phone">Enter your phone number:</label><br/>
-                            <input className="FormInputBuy" type="number" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><br/>
-                            <label className="FormLabel" for="phoCityne">City:</label><br/>
-                            <input className="FormInputBuy" id="City" type="text"/><br/>
-                            <label className="FormLabel" for="Address">Address:</label><br/>
-                            <input className="FormInputBuy" id="Address" type="text"/><br/>
-                            <input type="submit" value="Buy"/>
-                            <input type="reset"/>
-                        </form>
-                        <button onClick={()=> setBuy(!Buy)}>Close</button>
-                    </div>
-                </div>
-                : false
-                }
            </div>
         )
     }
