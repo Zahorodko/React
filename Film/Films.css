@@ -1,0 +1,411 @@
+.FilmsMain
+{
+    background-color: black;
+    box-sizing: border-box;
+    font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.One
+{
+    height: 700px;
+    background: url('./netflix/PL-pl-20220912-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    border-bottom: 8px solid #222;
+}
+.OneMain
+{
+    width: 100%;
+    height: 100%;
+    background-color: #0000006e;
+    display: flex;
+    flex-direction: column;
+}
+.OneHeader
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0 0 0;
+    margin: 0 3.5rem;
+    box-sizing: border-box;
+}
+.OneFooter
+{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.OneFooter h1
+{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+}
+.OneFooter h2
+{
+    font-size: 1.625rem;
+    margin: 1rem auto;
+    font-weight: 400;
+}
+.OneFooter p
+{
+    font-size: 1.2rem;
+    max-width: none;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+.OneHeaderLogo
+{
+    fill: red;
+    width: 11em;
+}
+.OneFooterCenter
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6em;
+}
+.Two
+{
+    padding: 70px 45px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 8px solid #222;
+}
+.TwoLeft
+{
+    height: 100%;
+    padding: 0 0 0 3rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.TwoRight
+{
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.TwoLeft
+{
+    color: #fff;
+}
+.TwoLeft h1
+{
+    font-size: 3.1em;
+    line-height: 1.1;
+    padding: 15px 0;
+}
+.TwoLeft h2
+{
+    font-size: 1.6em;
+    font-weight: 400;
+}
+.TwoRight
+{
+    position: relative;
+}
+.TwoRightImg
+{
+    position: absolute;
+    background: url('./netflix/tv.png') no-repeat center center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.TwoRightImgTwo
+{
+    position: absolute;
+    background: url('./netflix/device-pile.png') no-repeat center center;
+    background-size: contain;
+    height: 120%;
+    width: 120%;
+    z-index: 2;
+}
+.TwoRightVideo
+{
+    width: 360px;
+    margin: -8px 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+.TwoRightVideoTwo
+{
+    width: 360px;
+    margin: -9em 0 0 0;
+    position: relative;
+    z-index: 1;
+}
+.TwoRightVideo video
+{
+    height: 100%;
+    width: 100%;
+}
+.TwoRightVideoTwo video
+{
+    height: 100%;
+    width: 100%;
+}
+.TwoRightImgLast
+{
+    background: url('./netflix/AAAABcwicdUnVW-uEe-71jLGMbTN6JYYmrI9xO0EO-Cco_UsxMOAaDw3-tqTuKX625piqdEDlBk6IwJbPgaAsuQKpr10uWTezLH-zs2R.png') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+.ThreeRightImg
+{
+    background: url('./netflix/mobile-0819.jpg') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+.Question
+{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5em 7em 2em;
+}
+.Question h1
+{
+    font-size: 3em;
+}
+.QuestionMain
+{
+    margin: 2em auto;
+    width: 65%;
+}
+.QuestionMainOne
+{
+    margin: 8px;
+    font-size: 1.6em;
+    box-sizing: border-box;
+}
+.QuestionMainHeader
+{
+    background: rgb(48,48,48);
+    padding: 0.8em 2.2em 0.8em 1.2em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.QuestionMainFooter
+{
+    background: rgb(48,48,48);
+    margin-top: 1px;
+    padding: 1.2em;
+    display: none;
+}
+.QuestionMainFooterArray
+{
+    display: block;
+}
+.ThreeRightImgTwo
+{
+    width: 60%;
+    height: 6em;
+    display: flex;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    background: #000;
+    border: 2px solid hsla(0,0%,100%,.25);
+    border-radius: 0.75em;
+    bottom: 8%;
+    box-shadow: 0 0 2em 0 #000;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.ThreeRightImgTwoImg
+{
+    background: url('./netflix/boxshot.png') no-repeat center center;
+    height: 100%;
+    width: 15%;
+    background-size: contain;
+}
+.ThreeRightImgTwoText
+{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 8em 0 0;
+}
+.Download
+{
+    color: #0071eb;
+    font-size: .9em;
+    font-weight: 400;
+}
+.OneSelect 
+{
+    color: #333;
+    direction: ltr;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    margin: 0px 20px;
+}
+.OneSelect select
+{
+    line-height: 1.3em;
+    overflow: hidden;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
+    white-space: nowrap;
+    padding: 7px;
+    background: rgba(0,0,0,.4);
+    border: 1px solid #aaa;
+    color: #fff;
+    font-size: .875rem;
+}
+.OneSignIn
+{
+    background-color: #e50914;
+    float: right;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 17px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+.OneFooterInput
+{
+    appearance: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 18px 11px;
+    width: 100%;
+}
+.OneFooterInput
+{
+    outline: none;
+}
+.OneFooterSignIn
+{
+    background-color: #e50914;
+    background-image: linear-gradient(180deg,#e50914,#db0510);
+    box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+    color: #fff;
+    font-size: 1.625rem;
+    padding: 15px 25px;
+    width: 40%;
+    box-sizing: border-box;
+}
+.OneFooterForm
+{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.OneHeaderRight
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.SevenFooterCenter
+{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.SevenFooterCenter p
+{   
+    color: #fff;
+    font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1.2rem;
+    max-width: none;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+.Seven
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 7em 0;
+    border-bottom: 8px solid #222;
+}
+.Eight
+{
+    width: 100%;
+    padding: 4em 0;
+    color: #737373;
+    font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.EightMainOne
+{
+    margin: 0 0 30px;
+}
+.EightMainTwo ul
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.EightMain
+{
+    width: 55%;
+}
+.EightMainTwo ul li
+{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 16px;
+    min-width: 100px;
+    padding: 0 12px 0 0;
+    vertical-align: top;
+    width: 25%;
+    list-style: none;
+    margin-left: 0;
+    font-size: 13px;
+}
+.EightMainFour
+{
+    padding: 20px 0;
+    vertical-align: top;
+    width: 25%;
+    list-style: none;
+    font-size: 13px;
+}
