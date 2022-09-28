@@ -1,0 +1,27 @@
+/* *
+{
+    margin: 0;
+    padding: 0;
+} */
+.carousel-item
+{
+    height: 100vh;
+    min-height: 10vh;
+    max-height: 95vh;
+}
+.carousel-item img
+{
+    height: 100%;
+}
+.font_1
+{
+    font-size: 1.3em;
+}
+.bg_1
+{
+    background-color: #e0e0e0;
+}
+.bg_2
+{
+    background-color: #dedefb;
+}
