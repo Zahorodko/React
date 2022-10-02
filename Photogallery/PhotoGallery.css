@@ -1,0 +1,505 @@
+.PhotoGallery
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: #6c6c6c;
+    padding: 11em 2em 0 2em;
+    box-sizing: border-box;
+}
+.Photo
+{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
+}
+.Photo #PhotoBlur
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.Gallery
+{
+    width: 90%;
+    display: flex;
+    background-color: #505050;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: -5px -3px 8px 5px #838383, 3px 16px 10px 7px #242424;
+}
+.PhotoMain
+{
+    width: 1000px;
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-height: 700px;
+}
+.PhotoMain img
+{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 13px black;
+}
+.Gallery div
+{
+    width: 15vw;
+    display: flex;
+    background: #000000;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 4px solid #000000;
+    margin: 5px;
+    box-sizing: border-box;
+    border-radius: 11px;
+    box-shadow: -1px -1px 7px 0px #939393, 0 3px 10px 4px #000000;
+    position: relative;
+    transition: 0.5s;
+}
+.Gallery div img
+{
+    width: 100%;
+    text-align: center;
+    border-radius: 9px;
+    box-sizing: border-box;
+    transition: .3s ;
+    cursor: pointer;
+}
+.Gallery div:hover
+{
+    box-shadow: 0px 0px 6px 2px #6699cd, 0 0px 10px 6px #000000;
+    z-index: 3;
+    transform: translate(0px, -2px);
+}
+#PhotoBlur
+{
+    filter: blur(3px);
+}
+.left ,.right
+{
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.right
+{
+    background-image: url('./img/arrow6.png');
+    margin-right: 30px;
+}
+.left
+{
+    background-image: url('./img/arrow5.png');
+    margin-left: 10px;
+}
+.right:hover
+{
+    opacity: 0.8;
+}
+.left:hover
+{
+    opacity: 0.8;
+}
+.addImage
+{
+    position: fixed;
+    padding: 10px 50px;
+    top: 20px;
+    left: 20px;
+    background: rgb(255,255,255);
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -5px -4px 10px rgb(153 153 153 / 80%), 6px 6px 10px rgb(0 0 0 / 20%);
+    color: #6f6cde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: semibold;
+}
+.addImage:hover
+{
+    opacity: 1;
+    background-color:  rgb(243,240,241);
+    box-shadow: -5px -4px 10px #a7e0ff7d, 6px 6px 10px rgb(0 0 0 / 20%);
+    color: #5653bd;
+}
+.folder
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    color: #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+.folder:hover
+{
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    background-color: #404040;
+}
+.GallerySvgHover
+{
+    transition: .3s;
+}
+.folder:hover .GallerySvgHover
+{
+    fill: aliceblue;
+}
+.tagsFolder
+{
+    display: flex;
+    color: white;
+    position: fixed;
+    z-index: 9;
+    background-color: #000000;
+    flex-direction: column;
+    top: 100px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 3px;
+}
+.Addfolder
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: burlywood;
+    color: white;
+    text-align: center;
+}
+.tagsFolder li
+{
+    color: #1e1e1e;
+    background-color: #f3f6f9;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 16px;
+    cursor: pointer;
+    min-width: 150px;
+    transition: .3s;
+    font-size: 0.7em;
+    box-shadow: -2px -2px 5px 2px #ffffff, 2px 2px 2px 2px #3c3c3c, 0px 0px 12px 2px #afafaf inset;
+}
+.tagsFolder li:hover
+{
+    box-shadow: 0 0 10px 2px #0b20ff;
+    transform: translate(2px, 2px);
+}
+.tagsFolderUl
+{
+    right: 20px;
+    position: fixed;
+    padding: 10px 50px;
+    top: 20px;
+    background: rgb(255,255,255);
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -5px -4px 10px rgb(153 153 153 / 80%), 6px 6px 10px rgb(0 0 0 / 20%);
+    color: #6f6cde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: semibold;
+}
+.tagsFolderUl:hover
+{
+    opacity: 1;
+    background-color: rgb(243,240,241);
+    box-shadow: -5px -4px 10px #a7e0ff7d, 6px 6px 10px rgb(0 0 0 / 20%);
+    color: #5653bd;
+}
+.spanclass
+{
+    height: 30px;
+    border: 2px solid #9f9f9f;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #cfe8ff;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: .5s;
+}
+.addImageImg, .addImageTitle
+{
+    height: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    background: rgb(255 255 255);
+}
+.spanclass>button
+{
+    padding: 10px;
+    width: 75px;
+    border: none;
+    background: #3801a5;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.spanclass>button:hover
+{
+    box-shadow: 0 0 10px 2px #0b20ff;
+}
+.spanclass>p
+{
+    padding: 5px;
+}
+.tagsImage
+{
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 590px;
+    right: 20px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    z-index: 12;
+    position: absolute;
+}
+.spanclass select
+{
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    text-align: center;
+    font-size: 1em;
+}
+.ChooseTag{
+    margin-bottom: 10px;
+    background: white;
+    padding: 3px;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.ClickImg
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 0 7em;
+    box-sizing: border-box;
+    background: black;
+}
+.download
+{
+    position: absolute;
+    bottom: 0;
+    color: black;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: .2;
+    transition: .3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+.download:hover
+{
+    opacity: 1;
+    background-color: #00a6ffa1;
+}
+.FolderColor
+{
+    background-color: red;
+}
+.AddPhotoInFolderTrue
+{
+    min-width: 200px;
+    max-width: 500px;
+    background-color: #585858;
+    color: #c7c7c7;
+    position: fixed;
+    top: 10%;
+    left: 6%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.AddInFolderButton:hover
+{
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    background-color: #404040;
+}
+.AddInFolderButton
+{
+    width: 75px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #adadad;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s;
+    border: 1px solid #9f9f9f;
+    font-size: 0.9em;
+    padding: 2px;
+    box-sizing: border-box;
+}
+.SaveCloseButton
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 6px;
+    color: #001eaf;
+}
+.SaveCloseButton div
+{
+    padding: 4px 10px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    color: #001eaf;
+}
+.SaveClose
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3px;
+    background: #4a4a4a;
+    margin: 5px 0;
+    background-color: aliceblue;
+    border-radius: 6px;
+    color: #001eaf;
+}
+.PhotoAddFolder
+{
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.DivKeyDelete
+{
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: #ffffffd1;
+    color: #000000;
+    border: 1px solid rgb(91 90 229);
+    opacity: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.Gallery div:hover .DivKeyDelete
+{
+    opacity: 1;
+}
+.Gallery div:hover .downloadMini
+{
+    opacity: 1;
+}
+.downloadMini
+{
+    position: absolute;
+    bottom: -7px;
+    right: -7px;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: #ffffffd1;
+    color: #000000;
+    border: 1px solid rgb(91 90 229);
+    opacity: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.DivKeyDelete:hover, .downloadMini:hover
+{
+    box-shadow: 0 0 5px 5px #f35151;
+    transform: translate(0px, -2px);
+}
+.AddImageSee
+{
+    font-size: 0.7em;
+}
+.ActuallyTags
+{
+    position: fixed;
+    padding: 10px 50px;
+    bottom: 20px;
+    right: 20px;
+    background: #f3f0f1;
+    background: #a7e0ffd9;
+    border-radius: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: -5px -4px 10px rgb(153 153 153 / 80%), 6px 6px 10px rgb(0 0 0 / 20%);
+    color: #6f6cde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+}
+.PhotoLogo
+{
+    background: url('./img/Photo_3.png') no-repeat center center;
+    background-size: contain;
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: 30px 0 0 0;
+}
+.HelpAddPhotoFolder
+{
+    display: flex;
+    flex-direction: column;
+}
